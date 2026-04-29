@@ -1,0 +1,79 @@
+<html lang= "en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>{{title | default: config.site_title}}</title>
+
+    {% comment %} vvv---------- FAVICON ----------vvv {% endcomment %}
+
+    <link rel="shortcut icon" href="/static/images/icon.ico" type="image/ico">
+    <link rel="icon" href="/static/images/icon.ico" type="image/ico">
+
+
+    {% comment %} vvv---------- CSS ----------vvv {% endcomment %}
+
+    <link rel="stylesheet" href="/assets/css/wa.css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+
+
+    {% comment %} vvv---------- EMBEDDING ----------vvv {% endcomment %}
+
+    {% block header %}
+        <meta property="theme-color" content="#8d0000">
+        <meta property="og:site_name" content="eddie-aster.neocities.org">
+        <meta property="twitter:title" content="{{title}}">
+        <meta property="og:title" content="{{title}}">
+        <meta property="og:article:author" content="Eddie Aster" />
+        <meta property="og:article:author" content="Eddie Aster" />
+        <meta name="author" content="Eddie Aster" />
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://neo-citrus-web.neocities.org/static/images/icon.ico">
+        <meta property="og:image:alt" content="A morning star head">
+        <meta property="twitter:card" content="summary">
+    {% endblock %}
+
+</head>
+
+
+{% comment %} vvv---------- BODY ----------vvv {% endcomment %}
+
+<body>
+
+
+{% comment %} vvv---------- NAVIGATION ----------vvv {% endcomment %}
+
+{% include "nav.liquid" %}  
+
+
+{% comment %} vvv---------- MAIN CONTENT ----------vvv {% endcomment %}
+
+<main id="content">
+{% block content %}{% endblock %}
+</main>  
+
+</body>
+
+
+{% comment %} vvv---------- FOOTER ----------vvv {% endcomment %}
+
+<footer class="footer">
+<p> 2026 © </p> 
+<img class="signature" src="/assets/images/signature.webp" alt="Eddie Aster's signature">
+</footer>
+
+
+
+
+{% comment %} vvv---------- GSAP ----------vvv {% endcomment %}
+
+
+{% comment %} vvv---------- JAVASCRIPT ----------vvv {% endcomment %}
+    
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="../assets/js/main.js"></script>
+
+
+</html>
+
+
+

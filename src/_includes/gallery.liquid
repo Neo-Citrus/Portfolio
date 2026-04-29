@@ -1,0 +1,29 @@
+---
+pagination:
+    data: collections.gallery
+    size: 6
+    alias: illustration
+---
+
+
+{% comment %} vvv---------- LAYOUT ----------vvv {% endcomment %}
+
+{% layout "body.liquid", title: "Illustration" %}
+
+
+{% comment %} vvv---------- CONTENT ----------vvv {% endcomment %}
+
+{% block content %}
+<h1> Portfolio </h1>
+   <ul class="art-list"> {%- for post in collections.gallery reversed -%}
+    <li>
+    <a href="{{ post.url }}">
+        <span class="art-image"><img src="{{post.data.images[0].path}}" alt="{{post.data.images[0].alt}}"></span>
+        <span class="art-title">{{post.data.title}}</span>
+    </a>
+    </li>
+    {%- endfor -%}
+</ul>
+
+
+{% endblock %}

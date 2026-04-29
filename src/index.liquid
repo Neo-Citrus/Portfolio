@@ -1,0 +1,54 @@
+{% comment %} vvv---------- LAYOUT ----------vvv {% endcomment %}
+
+{% layout "body.liquid", title: "Eddie Aster" %}
+
+
+{% comment %} vvv---------- MAIN CONTENT ----------vvv {% endcomment %}
+
+{% block content %}
+
+
+{% comment %} vvv---------- TEXT CONTENT ----------vvv {% endcomment %}
+
+<div id="text-content">
+    <h1> Welcome to my portfolio!</h1>
+
+
+    {% comment %} vvv-- Doodles & Stickers --vvv {% endcomment %}
+
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=rQMSfSFqxCqIv0tp">
+    <img id="cool-s" src="/assets/images/Cool_S.svg" alt="an image of the cool S">
+    </a>
+
+    <a href="https://youtu.be/wBhzmys2-eU?si=elEEe784CirjY-CG">
+    <img id="nautical-star" src="/assets/images/Nautical_star.svg" alt="an image of a nautical star">
+    </a>
+
+    <a href="https://youtu.be/kyg5qKpI_98?si=rj8HC_K78qOJSUFJ">
+    <img id="platano-sticker" src="/assets/images/platano-sticker.webp" alt="an image of a Plátano de Canarias sticker">
+    </a>
+
+
+    {% comment %} vvv-- Sound FX Image --vvv {% endcomment %}
+
+    <div class="confetti">
+    <button class="confetti-button" onclick="togglePlayPause()"></button>
+    <p> This year's Birthday Cake! <3 </p>
+    <img id= "polaroid-top" src="/assets/images/polaroid.webp" alt="an image of a polaroid">
+    <audio id="radio-song" src="/assets/audio/portal_radio_song.mp3" autoplay></audio>
+    </div>
+
+
+    <p> My name's <b>Eddie</b> and I'm an illustrator and aspiring game dev. </p>
+    <p> This is the little corner of the internet where I show off the best of the best of my skills!</p>
+
+    <p> This website has been made as a way to showcase my skills for <a id="scramble" class="valla-game-link" href="https://valla.nu/valla-game-education/">Valla Game Education's</a> application process, but I might still use it in the future! ;b  </p>
+
+    <hr>
+
+    <h2> vvv Check out my stuff! vvv </h2>
+</div>
+
+<script src="/assets/js/index.js"></script>
+
+{% endblock %}

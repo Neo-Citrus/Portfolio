@@ -1,0 +1,381 @@
+/* ---------- HTML ----------*/
+
+html {
+ background-image: url("../images/background.webp");  
+    background-size: cover;
+    min-height: 100vh;
+    cursor: url(../cursors/default.png), auto;
+
+}
+
+/* ---------- COMMON VARIABLES ---------- */
+
+:root {
+    --basic-font-color: white;
+    --link-font-color: #af2e0d;
+    --highlight-color: #551606;
+}
+
+*:active {
+    cursor: url(../cursors/click.png), auto;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: red;
+}
+
+::selection {
+  color: white;
+  background: red;
+}
+
+
+/* ---------- FONTS ---------- */
+
+@font-face {
+    font-family: Stamp RSPK;
+    src: url(../fonts/StampRSPKOne-Light.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Stamp RSPK;
+    src: url(../fonts/StampRSPKOne-Medium.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Punks Not Dead;
+    src: url(../fonts/Punk_s_not_dead.ttf);
+}
+
+
+/* ---------- COMMON ELEMENT SETTINGS ---------- */
+
+a {
+    color: var(--link-font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: url(../cursors/pointer.png), auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 2em;
+}
+
+ul li:before {
+    content: "\26E7";
+    margin: 0;
+}
+
+p {
+    font-size: 2em;
+}
+
+h1 {
+    font-family: "Punks Not Dead";
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+
+/* ---------- NAV ---------- */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: url(../cursors/default.png), auto;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    margin-left: 5em;
+}
+
+#logo:hover {
+    background: none;
+}
+
+.logo {
+    width: 100%;;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 3em;
+    cursor: url(../cursors/default.png), auto;
+}
+
+nav a{
+    position: relative;
+    margin: auto;
+    z-index: 2;
+}
+
+nav a[aria-current="page"]{
+    color: black;
+}
+
+nav a:hover[aria-current="page"]{
+    color: black;
+}
+
+nav a:hover {
+    background: none;
+    color: var(--link-font-color);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+    font-family: "Punks Not Dead";
+    font-size: 4em;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    justify-content: space;
+}
+
+nav li::before {
+    content: "";
+
+}
+
+ #nav-skip {
+    position: absolute;
+    left: 1ch;
+    inset-block: 0;
+    align-self: center;
+    padding: 0.5ch;
+}
+
+#nav-skip:not(:focus) {
+    top: -150%;
+}
+
+.home {
+    left: -20%;
+}
+
+.portfolio {
+    left: -5%;
+}
+
+#scramble {
+    font-kerning: none;
+    font-feature-settings: "liga" 0;
+}
+
+#scramble:hover {
+    font-kerning: none;
+    font-feature-settings: "liga" 0;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    gap: 3em;
+    top: 4%;
+    right: -13%;
+    left: 10%;
+    z-index: 1;
+    pointer-events: none;
+
+    img {
+        width: 20%;
+    }
+}
+
+
+/* ---------- BODY ---------- */
+
+body {
+    background-color: transparent;
+    cursor: url(../cursors/default.png), auto;
+    margin: 0;
+    font-family: "Stamp RSPK";
+}
+
+
+    /* ---------- CONTENT ---------- */
+
+    #content {
+        background: url(../images/paper-sheet.webp);
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        position: relative;
+        float: left;
+    }
+
+
+    /* ---------- TEXT CONTENT ---------- */
+
+    #text-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: black;
+        margin: 0;
+        width: 60%;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #cool-s {
+        position: absolute;
+        width: 15%;
+        margin: 0;
+        rotate: 25deg;
+        right: -10%;
+        top: 5%;
+        cursor: url(../cursors/default.png), auto;
+    }
+
+    #nautical-star {
+        position: absolute;
+        width: 15%;
+        margin: 0;
+        rotate: -25deg;
+        bottom: 0%;
+        left: -7%;
+        cursor: url(../cursors/default.png), auto;
+    }
+
+    #platano-sticker {
+        position: absolute;
+        width: 20%;
+        margin: 0;
+        rotate: 15deg;
+        right: 15%;
+        top: -9%;
+        cursor: url(../cursors/default.png), auto;
+
+    }
+
+    #polaroid-top {
+        position: absolute;
+        width: 30%;
+        margin: 0;
+        rotate: -20deg;
+        top: -30%;
+        left: -15%;
+        pointer-events: none;
+    }
+
+    .confetti p {
+        position: absolute;
+        top: -1%;
+        left: -2.5%;
+        color: black;
+        rotate: -20deg;
+        font-size: .85em;
+        width: 15%;
+        z-index: 3;
+    }
+
+    .confetti canvas {
+        position: absolute;
+        background-color: transparent;
+        pointer-events: none;
+        top: -85%;
+        left: -70%;
+    }
+
+    .confetti-button {
+        position: absolute;
+        width: 25%;
+        height: 30%;
+        margin: 0;
+        rotate: -19deg;
+        top: -25%;
+        left: -12%;
+        cursor: url(../cursors/default.png), auto;
+    }
+
+    .valla-game-link {
+        display: inline-block;
+        width: 45%;
+    }
+
+/* ---------- ABOUT PAGE ---------- */
+
+#about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.5em;
+    height: 100%;
+}
+
+#about-text h1 {
+    margin-bottom: 0.2em;
+}
+
+#about-text p {
+    width: 50%;
+    font-size: 1.2em;
+}
+
+
+/* ---------- PORTFOLIO PAGE ---------- */
+
+#tiny-list ul {
+    font-size: 1em;
+}
+
+.portfolio-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    gap: 1em;
+}
+
+.list-item {
+    width: 100%;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    left: 0; bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--basic-font-color);
+    font-size: small;
+    cursor: url(../cursors/default.png);
+}
+
+.signature {
+    width: 20%;
+}
