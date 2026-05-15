@@ -1,0 +1,292 @@
+/* ---------- HTML ----------*/
+
+html {
+ background-image: url("../images/background.webp");  
+    background-size: cover;
+    min-height: 100vh;
+    cursor: url(../cursors/default.png), auto;
+
+}
+
+/* ---------- COMMON VARIABLES ---------- */
+
+:root {
+    --basic-font-color: white;
+    --link-font-color: #af2e0d;
+    --highlight-color: #551606;
+}
+
+*:active {
+    cursor: url(../cursors/click.png), auto;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: red;
+}
+
+::selection {
+  color: white;
+  background: red;
+}
+
+
+/* ---------- FONTS ---------- */
+
+@font-face {
+    font-family: Stamp RSPK;
+    src: url(../fonts/StampRSPKOne-Light.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Stamp RSPK;
+    src: url(../fonts/StampRSPKOne-Medium.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Punks Not Dead;
+    src: url(../fonts/Punk_s_not_dead.ttf);
+}
+
+
+/* ---------- COMMON ELEMENT SETTINGS ---------- */
+
+a {
+    color: var(--link-font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: url(../cursors/pointer.png), auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 2em;
+}
+
+p {
+    font-size: 2em;
+}
+
+h1 {
+    font-family: "Punks Not Dead";
+    font-size: 5em;
+    color: white;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+
+/* ---------- NAV ---------- */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: url(../cursors/default.png), auto;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    margin-left: 5em;
+}
+
+#logo:hover {
+    background: none;
+}
+
+.logo {
+    width: 15%;
+    display: block;
+    margin-left: 0%;
+    margin-top: 2%;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 3em;
+    cursor: url(../cursors/default.png), auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a{
+    position: relative;
+    margin: auto;
+    z-index: 2;
+}
+
+nav a[aria-current="page"]{
+    color: black;
+}
+
+nav a:hover[aria-current="page"]{
+    color: black;
+}
+
+nav a:hover {
+    background: none;
+    color: var(--link-font-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+    font-family: "Punks Not Dead";
+    font-size: 4em;
+    width: 70%;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    justify-content: space;
+}
+
+nav li::before {
+    content: "";
+
+}
+
+ #nav-skip {
+    position: absolute;
+    left: 1ch;
+    inset-block: 0;
+    align-self: center;
+    padding: 0.5ch;
+}
+
+#nav-skip:not(:focus) {
+    top: -150%;
+}
+
+.home {
+    position: relative;
+    left: 30%;
+}
+
+.about {
+    position: relative;
+    left: 70%;
+}
+
+.portfolio {
+    position: relative;
+    left: 55%;
+}
+
+#scramble {
+    font-kerning: none;
+    font-feature-settings: "liga" 0;
+}
+
+#scramble:hover {
+    font-kerning: none;
+    font-feature-settings: "liga" 0;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    gap: 3em;
+    top: 4%;
+    right: -13%;
+    left: 10%;
+    z-index: 1;
+    pointer-events: none;
+
+    img {
+        width: 20%;
+    }
+}
+
+
+/* ---------- BODY ---------- */
+
+body {
+    background-color: transparent;
+    cursor: url(../cursors/default.png), auto;
+    margin: 0;
+    font-family: "Stamp RSPK";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---------- CONTENT ---------- */
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---------- GALLERY ---------- */
+
+.art-list {
+    column-count: 2;
+    column-gap: 8px;
+}
+
+#image-list {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 8px;
+    break-inside: avoid;
+    text-decoration: none;
+}
+
+.art-image img {
+    max-width: 100%;
+    display: block;
+    grid-row: 1 / -1;
+    grid-column: 1;
+}
+
+.art-image {
+    display: grid;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    left: 0; bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--basic-font-color);
+    font-size: small;
+    cursor: url(../cursors/default.png);
+}
+
+.signature {
+    width: 20%;
+}
+
+

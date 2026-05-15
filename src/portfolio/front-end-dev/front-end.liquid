@@ -1,0 +1,125 @@
+<html lang= "en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+
+    {% comment %} vvv---------- FAVICON ----------vvv {% endcomment %}
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Eddie Aster" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+
+    {% comment %} vvv---------- CSS ----------vvv {% endcomment %}
+
+    <link rel="stylesheet" href="/assets/css/frontend.css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+
+
+    {% comment %} vvv---------- EMBEDDING ----------vvv {% endcomment %}
+
+    {% block header %}
+        <meta property="theme-color" content="#8d0000">
+        <meta property="og:site_name" content="eddie-aster.neocities.org">
+        <meta property="twitter:title" content="{{title}}">
+        <meta property="og:title" content="{{title}}">
+        <meta property="og:article:author" content="Eddie Aster" />
+        <meta property="og:article:author" content="Eddie Aster" />
+        <meta name="author" content="Eddie Aster" />
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://neo-citrus-web.neocities.org/static/images/icon.ico">
+        <meta property="og:image:alt" content="A morning star head">
+        <meta property="twitter:card" content="summary">
+    {% endblock %}
+
+    <title> Front End Development </title>
+</head>
+
+{% comment %} vvv---------- BODY ----------vvv {% endcomment %}
+
+<body>
+
+
+{% comment %} vvv---------- NAVIGATION ----------vvv {% endcomment %}
+
+{% include "nav.liquid" %}  
+
+{% comment %} vvv---------- CONTENT ----------vvv {% endcomment %}
+
+{% block content %}
+<h1> Front End Development </h1>
+
+
+
+<div id="iframes">
+<h2> VVV My personal website VVV </h2>
+    <div id="info-text">
+        <p> This was the very first website I made. It uses HTML, CSS, a little bit of JavaScript and a little bit of Liquid JS.</p>
+        <p> I made it so I could showcase my art (since I don't like posting on social media) and to replicate the Frutiger Aero style, which is one of my favorite styles aside from the one you're seeing on this actual website.</p>
+        <p> It showcases a working Blog and a Gallery with a functioning tagging system that you can navigate through.</p>
+    </div>
+        <div id="neo-citrus-web">
+            <img id="frame-img" src="../../../assets/images/Window-Frame-Template.svg">
+            <iframe id="neo-web" src="https://neo-citrus-web.neocities.org/" frameborder="0"> </iframe>
+        </div>
+    <a class="github" href="https://github.com/Neo-Citrus/Neo-Citrus-Web" target="_blank"> Check the GitHub for this page </a>
+
+    <hr>
+
+        <h2> VVV My friend's Portfolio website VVV </h2>
+    <div id="info-text">
+        <p> This is the website I made for my friend. It uses HTML, CSS and JavaScript.</p>
+        <p> I made it so they can have their own online portfolio based on their own art and preferences. They wanted a Windows 98 Desktop stye website, but in a black and red color scheme.</p>
+        <p> It showcases working windows that can be dragged around and be interacted with.</p>
+    </div>
+        <div id="ghoul-in-the-grave">
+            <img id="pc-frame-img" src="../../../assets/images/pc-frame.png">
+            <iframe id="ghoul-web" src="https://ghoulinthegrave-666.neocities.org/#" frameborder="0"> </iframe>
+        </div>
+        <p id="no-github"> No GitHub for this one, sorry :&#40; </p>
+
+    <hr>
+
+        <h2> VVV What I used for this website VVV </h2>
+            <div id="info-text-zine">
+                <p> The website you're navigating right now has been made with HTML, CSS, a little bit of JavaScript and a little bit of Liquid JS.</p>
+                <p> I made it so I could showcase my skills for the Valla Game Education folks judging the portfolios &#40;Hello there!&#41; of future students.</p>
+                <p> It showcases interactable items &#40;Look out for Easter Eggs!&#41; and a Gallery with a working lightbox. </p>
+                <p> The aesthetic is inspired by the <a id="link" href="https://zinejam.com/blog-1/zines-101" target="_blank">Zines</a> that were made by punk bands to advertise their gigs and educate other folks about rallies and such. </p>
+            </div>
+        <a class="github" href="https://github.com/Neo-Citrus/Neo-Citrus-Web" target="_blank"> Check the GitHub for this website </a>
+
+    <hr>
+
+        <h2>Can't find any Easter Eggs?</h2>
+            <p> Well, first of all, you're blind. &#40;I'm kidding lol&#41;</p>
+            <p><b> vv You can check the full list of Easter Eggs under the cut vv </b></p>
+                <details name="easter-egg-spoilers">
+                    <summary>Home Page</summary>
+                        <ul>
+                            <li>Pressing on the birthday cake picture shoots out confetti in the colors of the portals from the game Portal. 
+                                It will also play the radio jingle from the same game.</li>
+
+                            <li>Pressing on the "Plátano de Canarias" sticker will send you to a youtube video that plays a really famous song from the Canary Islands: 
+                                El Polvorete by Pepe Benavente.</li>
+
+                            <li>Pressing on the "Cool S" will also send you to a youtube video, this time for Never Gonna Give You Up by Rick Astley. You just got Rickrolled!</li>
+
+                            <li>Pressing on the "Nautical Star" will send you this time to my favorite song from one of my favorite games:
+                                Rosalina's Comet Observatory ver. 3 from Super Mario Galaxy.</li>
+                </details>
+</div>
+
+
+{% comment %} vvv---------- FOOTER ----------vvv {% endcomment %}
+
+<footer class="footer">
+<p> 2026 © </p> 
+<img class="signature" src="/assets/images/signature.webp" alt="Eddie Aster's signature">
+</footer>
+
+{% endblock %}

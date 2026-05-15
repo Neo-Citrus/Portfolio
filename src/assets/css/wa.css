@@ -63,6 +63,8 @@ a {
 
 a:hover {
     cursor: url(../cursors/pointer.png), auto;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
 }
 
 ul {
@@ -113,14 +115,22 @@ header {
 }
 
 .logo {
-    width: 100%;;
+    width: 15%;
+    display: block;
+    margin-left: 0%;
+    margin-top: 2%;
 }
 
 nav {
     margin-left: auto;
     margin-right: 3em;
     cursor: url(../cursors/default.png), auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
 
 nav a{
     position: relative;
@@ -139,15 +149,17 @@ nav a:hover[aria-current="page"]{
 nav a:hover {
     background: none;
     color: var(--link-font-color);
+    text-decoration: none;
 }
 
-nav ul {
+.nav-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2.5em;
     font-family: "Punks Not Dead";
     font-size: 4em;
+    width: 70%;
 }
 
 nav li {
@@ -174,11 +186,18 @@ nav li::before {
 }
 
 .home {
-    left: -20%;
+    position: relative;
+    left: 30%;
+}
+
+.about {
+    position: relative;
+    left: 70%;
 }
 
 .portfolio {
-    left: -5%;
+    position: relative;
+    left: 55%;
 }
 
 #scramble {
@@ -223,12 +242,23 @@ body {
 
     #content {
         background: url(../images/paper-sheet.webp);
-        background-size: 100% 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
         width: 100%;
-        height: 100%;
+        height: 140%;
         margin: auto;
         position: relative;
         float: left;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        margin: auto;
+        padding-top: 5em;
     }
 
 
@@ -261,8 +291,8 @@ body {
         width: 15%;
         margin: 0;
         rotate: -25deg;
-        bottom: 0%;
-        left: -7%;
+        bottom: -10%;
+        left: -5%;
         cursor: url(../cursors/default.png), auto;
     }
 
@@ -272,7 +302,7 @@ body {
         margin: 0;
         rotate: 15deg;
         right: 15%;
-        top: -9%;
+        top: -15%;
         cursor: url(../cursors/default.png), auto;
 
     }
@@ -282,28 +312,30 @@ body {
         width: 30%;
         margin: 0;
         rotate: -20deg;
-        top: -30%;
+        top: -35%;
         left: -15%;
         pointer-events: none;
+        z-index: 3;
     }
 
     .confetti p {
         position: absolute;
-        top: -1%;
+        top: 1%;
         left: -2.5%;
         color: black;
         rotate: -20deg;
         font-size: .85em;
         width: 15%;
-        z-index: 3;
+        z-index: 4;
     }
 
     .confetti canvas {
         position: absolute;
         background-color: transparent;
         pointer-events: none;
-        top: -85%;
-        left: -70%;
+        top: -90%;
+        left: -65%;
+        z-index: 3;
     }
 
     .confetti-button {
@@ -312,14 +344,25 @@ body {
         height: 30%;
         margin: 0;
         rotate: -19deg;
-        top: -25%;
-        left: -12%;
+        top: -28%;
+        left: -13%;
         cursor: url(../cursors/default.png), auto;
     }
 
-    .valla-game-link {
+    .link {
         display: inline-block;
-        width: 45%;
+        width: 39%;
+        font-size: 0.95em;
+    }
+
+    #cake-img {
+        position: absolute;
+        z-index: 1;
+        width: 25%;
+        rotate: -19deg;
+        top: -27%;
+        left: -11.5%;
+        pointer-events: none;
     }
 
 /* ---------- ABOUT PAGE ---------- */
@@ -361,9 +404,30 @@ body {
 }
 
 
+/* ---------- ART POSTS ---------- */
+
+#images {
+    width: 120%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.art {
+    width: 40%;
+}
+
+.container p {
+    font-size: 1.5em;
+}
+
+
 /* ---------- FOOTER ---------- */
 
-.footer {
+#footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -379,3 +443,325 @@ body {
 .signature {
     width: 20%;
 }
+
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+    /* ========== Xtra Large Devices ========== */
+        @media (width >= 1920px) {}
+
+
+    /* ========== Medium Devices ========== */
+
+        @media (width <= 1024px){
+            nav ul {
+                font-size: 7em;
+            }
+            .home {
+                left: -180%;
+            }
+
+            .about {
+                left: -130%;
+            }
+
+            .portfolio {
+                left: -70%;
+            }
+
+            h1 {
+                font-size: 7em;
+            }
+
+            p {
+                font-size: 3em;
+            }
+
+            #nautical-star {
+                bottom: 3%;
+                left: -12%;
+                width: 15%;
+            }
+
+            #platano-sticker {
+                top: -6%;
+                right: 3%;
+                width: 20%;
+            }
+
+            #cool-s {
+                width: 15%;
+                top: 10%;
+                right: -10%;
+            }
+
+            .link {
+                width: 29%;
+            }
+
+            .signature {
+                width: 20%;
+            }
+
+            .confetti-button {
+                width: 25%;
+                height: 55%;
+                top: -17%;
+                left: -17%;
+            }
+
+            .confetti canvas {
+                left: -38%;
+                top: -55%;
+            }
+
+            .confetti p {
+                font-size: 2em;
+                width: 20%;
+                top: 25%;
+                left: -10%;
+            }
+
+            #polaroid-top {
+                width: 30%;
+                top: -27%;
+                left: -20%;
+            }
+
+            #cake-img {
+                width: 25%;
+                top: -15%;
+                left: -17%;
+            }
+
+            #about-text p {
+                font-size: 1.8em;
+            }
+
+            #about-text h1 {
+                font-size: 7em;
+            }
+        }
+
+    /* ========== Small Devices ========== */
+
+        @media (width <= 640px) {
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav-links {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 4em;
+                transform: translateY(-100%);
+                transition: transform 0.2s;
+
+                li {
+                    text-align: center;
+
+                }
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+                position: absolute;
+                top: 0;
+                z-index: 999999;
+                background-color: rgba(0, 0, 0, 1);
+                transform: translateY(0);
+            }
+
+            .home {
+                left: 0;
+            }
+
+            .about {
+                left: 0;
+            }
+
+            .portfolio {
+                left: 0;
+            }
+
+            #menu-toggle {
+                display: block;
+                margin: auto;
+            }
+
+            header {
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .logo {
+                margin: 0;
+                width: 25%;
+            }
+
+            .images {
+                display: none;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            #nautical-star {
+                bottom: -8%;
+                left: 3%;
+                width: 25%;
+            }
+
+            #platano-sticker {
+                top: -7%;
+                right: 29%;
+                width: 35%;
+            }
+
+            #cool-s {
+                width: 30%;
+                top: 20%;
+                right: -17%;
+            }
+
+            .link {
+                width: 100%;
+            }
+
+            footer p {
+                font-size: 1.7em;
+            }
+
+            .signature {
+                width:  50%;
+            }
+
+            .confetti-button {
+                display: none;
+            }
+
+            .confetti canvas {
+                display: none;
+            }
+
+            .confetti p {
+                display: none;
+            }
+
+            #polaroid-top {
+                display: none;
+            }
+
+            #cake-img {
+                display: none;
+            }
+
+            #about-text p {
+                font-size: 1em;
+            }
+
+            #about-text h1 {
+                font-size: 3em;
+            }
+
+        }
+
+    /* ========== Xtra Small Devices ========== */
+
+        @media ( width <= 360px) {
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            #nautical-star {
+                bottom: -3%;
+                left: 1%;
+                width: 25%;
+            }
+
+            #platano-sticker {
+                top: -3%;
+                width: 25%;
+            }
+
+            #cool-s {
+                width: 20%;
+                top: 10%;
+                right: -15%;
+            }
+
+            .link {
+                width: 80%;
+            }
+
+            .signature {
+                width: 40%;
+            }
+
+            .confetti-button {
+                width: 50%;
+                height: 25%;
+                top: -23%;
+                left: -20%;
+            }
+
+            .confetti p {
+                width: 50%;
+                top: -6%;
+                left: -9%;
+            }
+
+            .confetti canvas {
+                left: -150%;
+            }
+
+            #polaroid-top {
+                width: 60%;
+                top: -28%;
+                left: -25%;
+            }
+
+            #cake-img {
+                width: 50%;
+                top: -23%;
+                left: -19%;
+            }
+
+            #about-text p {
+                font-size: 1.3em;
+            }
+
+            #about-text h1 {
+                font-size: 3em;
+            }
+
+        }
+
+
+
+

@@ -1,0 +1,85 @@
+---
+pagination:
+    data: collections.gallery
+    size: 6
+    alias: illustration
+---
+
+<html lang= "en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+
+    {% comment %} vvv---------- FAVICON ----------vvv {% endcomment %}
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Eddie Aster" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+
+    {% comment %} vvv---------- CSS ----------vvv {% endcomment %}
+
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+
+
+    {% comment %} vvv---------- EMBEDDING ----------vvv {% endcomment %}
+
+    {% block header %}
+        <meta property="theme-color" content="#8d0000">
+        <meta property="og:site_name" content="eddie-aster.neocities.org">
+        <meta property="twitter:title" content="{{title}}">
+        <meta property="og:title" content="{{title}}">
+        <meta property="og:article:author" content="Eddie Aster" />
+        <meta property="og:article:author" content="Eddie Aster" />
+        <meta name="author" content="Eddie Aster" />
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://neo-citrus-web.neocities.org/static/images/icon.ico">
+        <meta property="og:image:alt" content="A morning star head">
+        <meta property="twitter:card" content="summary">
+    {% endblock %}
+
+    <title> Illustration/Character Design </title>
+</head>
+
+
+{% comment %} vvv---------- BODY ----------vvv {% endcomment %}
+
+<body>
+
+
+{% comment %} vvv---------- NAVIGATION ----------vvv {% endcomment %}
+
+{% include "nav.liquid" %}  
+
+{% comment %} vvv---------- CONTENT ----------vvv {% endcomment %}
+
+{% block content %}
+<h1> Illustration/Character Design </h1>
+   <ul class="art-list"> {%- for post in collections.gallery reversed -%}
+    <li id="image-list">
+    <a href="{{ post.url }}">
+        <span class="art-image"><img class="illustration" src="{{post.data.images[0].path}}" alt="{{post.data.images[0].alt}}"></span>
+    </a>
+    </li>
+    {%- endfor -%}
+</ul>
+
+
+{% comment %} vvv---------- FOOTER ----------vvv {% endcomment %}
+
+<footer class="footer">
+<p> 2026 © </p> 
+<img class="signature" src="/assets/images/signature.webp" alt="Eddie Aster's signature">
+</footer>
+
+{% endblock %}
+
+
+{% comment %} vvv---------- JAVASCRIPT ----------vvv {% endcomment %}
+    
+<script src="/assets/js/portfolio.js"></script>

@@ -1,0 +1,22 @@
+{% layout "body.liquid"%}
+
+    
+{% block content %}
+    <article class="container">
+        <h1 class="title">{{title}}</h1>
+        {% gallery %}
+            <div id="images">
+            {% for image in images %}
+                {% galleryImg image.path, image.alt %}
+            {% endfor %}
+        {% endgallery %}
+            </div>
+            <hr>
+            {{content}}
+    </article>
+
+{% endblock %}
+
+
+
+

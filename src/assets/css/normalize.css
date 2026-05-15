@@ -317,7 +317,7 @@ textarea {
  */
 
 details {
-  display: block;
+  display: flex;
 }
 
 /*

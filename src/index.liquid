@@ -35,6 +35,7 @@
     <button class="confetti-button" onclick="togglePlayPause()"></button>
     <p> This year's Birthday Cake! <3 </p>
     <img id= "polaroid-top" src="/assets/images/polaroid.webp" alt="an image of a polaroid">
+    <img id="cake-img" src="/assets/images/cake.jpg" alt="an image of a cake resembling the one from the game Portal">
     <audio id="radio-song" src="/assets/audio/portal_radio_song.mp3" autoplay></audio>
     </div>
 
@@ -42,13 +43,17 @@
     <p> My name's <b>Eddie</b> and I'm an illustrator and aspiring game dev. </p>
     <p> This is the little corner of the internet where I show off the best of the best of my skills!</p>
 
-    <p> This website has been made as a way to showcase my skills for <a id="scramble" class="valla-game-link" href="https://valla.nu/valla-game-education/">Valla Game Education's</a> application process, but I might still use it in the future! ;b  </p>
+    <p> This website has been made as a way to showcase my skills for <a class="link" href="https://valla.nu/valla-game-education/" target="_blank">Valla Game Education's</a> application process, but I might still use it in the future! ;b  </p>
 
-    <hr>
-
-    <h2> vvv Check out my stuff! vvv </h2>
 </div>
 
+
+{% comment %} vvv---------- JAVASCRIPT ----------vvv {% endcomment %}
+    
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 <script src="/assets/js/index.js"></script>
 
+
+
 {% endblock %}
+

@@ -6,15 +6,11 @@ I'm interested in different areas of art, so here's pretty much the best of the 
 
 <ul class="portfolio-list">
     <li class="list-item"> 
-        <a id="scramble" class="random" href="front-end-dev">Front End Development</a> 
+        <a id="scramble" class="random" href="front-end-dev/front-end">Front End Development</a> 
     </li>
     <li class="list-item">
         <a id="scramble" class="random" href="illus-chara-design/gallery/">Illustration/Character Design</a>
     </li>
-    <li class="list-item">
-        <a id="scramble" class="random" href="modding">Modding</a>
-    </li>
-
 </ul>
 
 ### VVV Don't know where to start? VVV
@@ -25,6 +21,10 @@ I'm interested in different areas of art, so here's pretty much the best of the 
 
     - Linux Ricing (I changed from Windows to Linux on my own!)
 
-    - Console restoration
+    - Console restoration & electronics modding
 
     - PC Building
+
+{% comment %} vvv---------- JAVASCRIPT ----------vvv {% endcomment %}
+
+<script src="/assets/js/portfolio-main.js"></script>
